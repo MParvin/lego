@@ -1,0 +1,20 @@
+{
+  "apiVersion": "delivery/v2.1",
+  "kind": "DomainZone",
+  "metadata": {
+    "name": "example-com",
+    "namespace": "my-workspace"
+  },
+  "spec": {
+    "email": "user@example.com",
+    "origin": "example.com",
+    "records": {
+      "@": [
+        {
+          "A": ["1.2.3.4"],
+          "ttl": 90
+        }
+      ]
+    }
+  }
+}
