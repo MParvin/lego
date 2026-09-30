@@ -1,0 +1,31 @@
+Name = "Sotoon"
+Description = ''''''
+URL = "https://sotoon.ir"
+Code = "sotoon"
+Since = "v5.5.0"
+
+Example = '''
+SOTOON_TOKEN=xxxxx \
+SOTOON_WORKSPACE_UUID=xxxxx \
+lego run --dns sotoon -d '*.example.com' -d example.com
+'''
+
+Additional = '''
+Get your API token at https://ocean.sotoon.ir/profile/tokens
+
+Get your workspace UUID at https://ocean.sotoon.ir/profile/workspaces
+'''
+
+[Configuration]
+  [Configuration.Credentials]
+    SOTOON_TOKEN = "API token"
+    SOTOON_WORKSPACE_UUID = "Workspace UUID"
+  [Configuration.Additional]
+    SOTOON_POLLING_INTERVAL = "Time between DNS propagation check in seconds (Default: 2)"
+    SOTOON_PROPAGATION_TIMEOUT = "Maximum waiting time for DNS propagation in seconds (Default: 120)"
+    SOTOON_TTL = "The TTL of the TXT record used for the DNS challenge in seconds (Default: 120)"
+    SOTOON_HTTP_TIMEOUT = "API request timeout in seconds (Default: 30)"
+    SOTOON_SEQUENCE_INTERVAL = "Time between sequential requests in seconds (Default: 1)"
+
+[Links]
+  API = "https://docs.sotoon.ir/products/cdn/api-reference/api-getting-started"
